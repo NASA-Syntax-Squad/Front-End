@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Space-themed Design System - NASA Weather Explorer */
+
+@layer base {
+  :root {
+    /* Space theme colors */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 100% 70%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 270 50% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 20%;
+    --input: 220 30% 15%;
+    --ring: 200 100% 70%;
+
+    --radius: 0.75rem;
+
+    /* Space-specific design tokens */
+    --space-blue: 200 100% 70%;
+    --space-purple: 280 100% 70%;
+    --space-cyan: 180 100% 70%;
+    --space-pink: 320 100% 70%;
+    --space-dark: 220 25% 8%;
+    --space-darker: 220 30% 5%;
+    --space-card: 220 30% 12%;
+    --space-glow: 200 100% 70%;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--space-dark)) 0%, hsl(var(--space-darker)) 100%);
+    --gradient-nebula: linear-gradient(135deg, hsl(var(--space-dark)) 0%, hsl(var(--space-blue) / 0.2) 50%, hsl(var(--space-dark)) 100%);
+    --gradient-glow: linear-gradient(45deg, hsl(var(--space-cyan)) 0%, hsl(var(--space-blue)) 50%, hsl(var(--space-purple)) 100%);
+
+    /* Shadows and glows */
+    --shadow-glow: 0 0 20px hsl(var(--space-glow) / 0.3);
+    --shadow-cosmic: 0 8px 32px hsl(var(--space-dark) / 0.5);
+    --shadow-nebula: 0 4px 16px hsl(var(--space-blue) / 0.2);
+  }
+
+  .dark {
+    /* Same colors for consistent space theme */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 30% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 200 100% 70%;
+    --primary-foreground: 220 25% 8%;
+    --secondary: 270 50% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 25% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 30% 20%;
+    --input: 220 30% 15%;
+    --ring: 200 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Enhanced animations for space theme */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes scan-line {
+    0% { transform: translateY(-100px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+
+  @keyframes pulse-glow {
+    0% { 
+      box-shadow: 0 0 5px hsl(var(--space-glow) / 0.3);
+      filter: brightness(1);
+    }
+    100% { 
+      box-shadow: 0 0 20px hsl(var(--space-glow) / 0.8);
+      filter: brightness(1.2);
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .star {
+    animation: twinkle 3s infinite;
+  }
+
+  .star:nth-child(2n) {
+    animation-delay: 1s;
+  }
+
+  .star:nth-child(3n) {
+    animation-delay: 2s;
+  }
+
+  /* Custom utility classes */
+  .space-gradient-text {
+    @apply bg-gradient-to-r from-space-cyan via-space-blue to-space-purple bg-clip-text text-transparent;
+  }
+
+  .cosmic-border {
+    @apply border border-space-cyan/20 bg-space-card/30 backdrop-blur-md;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px hsl(var(--space-glow) / 0.4);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-scan-line {
+    animation: scan-line 3s linear infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 20s linear infinite;
+  }
+
+  .animate-orbit-reverse {
+    animation: orbit 15s linear infinite reverse;
+  }
+
+  .backdrop-blur-space {
+    backdrop-filter: blur(16px) saturate(180%);
+  }
+}
+
+/* Scrollbar styling for space theme */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-space-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-space-cyan/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-space-cyan/50;
+  }
+}
