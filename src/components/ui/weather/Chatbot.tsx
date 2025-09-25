@@ -11,15 +11,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, User, Loader2 } from 'lucide-react';
-import botIcon from '@/assets/bot_icon.png';
+import boticon from '@/assets/bot.jpg';
 
-// --- IMPORTANT SECURITY WARNING ---
-// Please replace "YOUR_GEMINI_API_KEY" with your actual Gemini API key.
-// Be aware that putting an API key in client-side code is a security risk.
-// Anyone can view your website's source code and steal your key.
-// For a production application, it is highly recommended to use the original
-// approach of calling a backend API route (like your /api/chat) that
-// securely stores and uses the API key on the server.
+//API Key for Google Generative AI
 const API_KEY = "AIzaSyBJdvpUbhkg9sysqVXwo8ce6rmpJfAswCM";
 
 const genAI = new GoogleGenerativeAI(API_KEY);
@@ -173,7 +167,7 @@ User Question: ${currentChatInput}`;
             className="rounded-full h-12 w-12 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
             size="icon"
           >
-            <img src={botIcon} alt="Chatbot Icon" className="w-15 h-15 rounded-full" />
+            <img src={boticon} alt="Chatbot Icon" className="w-15 h-15 rounded-full" />
           </Button>
         </div>
       </DialogTrigger>

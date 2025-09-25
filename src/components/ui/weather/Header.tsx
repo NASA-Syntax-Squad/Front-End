@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Satellite, SatelliteDish, Orbit, Radar } from 'lucide-react';
 import logo from '@/assets/logo.png';
-import headerBgVideo from '@/assets/header_bg.mp4'; // Import the video file
+import headerBgVideo from '@/assets/header_bg.mp4';
 
-// ✅ Inline AnimatedNumber (No changes needed here)
 function AnimatedNumber({
   value,
   duration = 1200,
@@ -106,7 +105,6 @@ const Header = () => {
         <source src={headerBgVideo} type="video/mp4" />
       </video>
 
-      {/* Background overlay and animated elements (no changes) */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -125,7 +123,6 @@ const Header = () => {
         <div className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-space-purple rounded-full animate-float shadow-glow" style={{ animationDelay: '2s' }}></div>
       </div>
       
-      {/* Main content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6 animate-fade-in">
         <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 bg-space-card/50 border border-space-cyan/30 rounded-full backdrop-blur-md animate-slide-up">
           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -136,9 +133,9 @@ const Header = () => {
         </div>
 
         <div className="mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tighter whitespace-nowrap">
-            <span className="bg-gradient-to-r from-space-cyan via-space-blue to-space-purple bg-clip-text text-transparent">
-              Orbit Climate Tracker
+          <h1 className="text-2xl md:text-7xl lg:text-8xl font-bold mb-10 tracking-tighter whitespace-nowrap">
+            <span className="bg-gradient-to-r from-space-cyan via-space-blue to-space-purple bg-clip-text text-transparent text-8xl">
+              Will It Rain On My Parade?
             </span>
           </h1>
         </div>
@@ -153,19 +150,17 @@ const Header = () => {
           <img
             src={logo}
             alt="Earth Logo"
-            className="w-28 h-28 object-contain animate-pulse-glow rounded-full"
+            className="w-28 h-28 object-contain animate-pulse-glow rounded-full mt-4 mb-2"
             style={{ background: 'transparent' }}
           />
         </div>
 
         <div className="animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          <p className="text-xl md:text-2xl text-cyan-100/90 max-w-4xl mx-auto font-light leading-relaxed tracking-wide mb-6">
-            Advanced orbital meteorological surveillance providing real-time atmospheric analysis
-            and multi-spectral forecasting for Earth's climate systems
+          <p className="text-xl md:text-2xl text-cyan-100/90 max-w-4xl mx-auto font-light leading-relaxed tracking-wide mb-6 mt-6">
+            A high-tech system that monitors weather in real time and gives detailed forecasts using satellite data
           </p>
         </div>
 
-        {/* Status grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-8 animate-fade-in group" style={{ animationDelay: '0.6s' }}>
           {[
             { icon: SatelliteDish, label: 'SATELLITES', value: <AnimatedNumber value={data.satellites} format={(n) => `${n} ONLINE`} />, status: data.status_status },

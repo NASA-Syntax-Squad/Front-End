@@ -59,7 +59,7 @@ const WeatherComparison: React.FC<WeatherComparisonProps> = ({
     if (!searchInput.trim() || isSearching) return;
     
     if (comparisonLocations.length >= 4) {
-      return; // Limit to 4 comparison locations
+      return;
     }
 
     setIsSearching(true);
@@ -103,7 +103,7 @@ const WeatherComparison: React.FC<WeatherComparisonProps> = ({
       name: currentLocation, 
       weatherData: currentWeatherData, 
       overallRisk: currentRisk,
-      coords: { lat: 0, lon: 0 } // Placeholder
+      coords: { lat: 0, lon: 0 }
     },
     ...comparisonLocations
   ];
@@ -180,7 +180,6 @@ const WeatherComparison: React.FC<WeatherComparisonProps> = ({
           </TabsList>
 
           <TabsContent value="overview" className="mt-4 space-y-4">
-            {/* Add Location Input */}
             <div className="flex gap-2">
               <Input
                 value={searchInput}
@@ -260,7 +259,7 @@ const WeatherComparison: React.FC<WeatherComparisonProps> = ({
               ))}
             </div>
 
-            {/* Best/Worst Summary */}
+            {/* Location Comparison */}
             {allLocations.length > 1 && (
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3">

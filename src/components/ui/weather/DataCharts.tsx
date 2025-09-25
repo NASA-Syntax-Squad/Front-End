@@ -45,7 +45,6 @@ interface DataChartsProps {
 }
 
 const DataCharts: React.FC<DataChartsProps> = ({ chartData, forecastChartData }) => {
-  // Enhanced color palette
   const colors = {
     primary: '#06b6d4',
     secondary: '#ec4899',

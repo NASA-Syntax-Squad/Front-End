@@ -169,7 +169,6 @@ const WeatherRadar: React.FC<WeatherRadarProps> = ({ location, coords }) => {
               variant="outline"
               onClick={() => {
                 setIsAnimating(false);
-                // Reset radar data
                 setRadarData(prev => ({
                   ...prev,
                   precipitation: Math.random() * 100,

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Github, Youtube, Linkedin, Facebook, Instagram } from 'lucide-react';
-import syntaxSquadLogo from '@/assets/footer.png';
-import nasaSpaceAppsLogo from '@/assets/footer.png';
 
 const Footer = () => {
   return (
@@ -9,14 +7,8 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-4">
         <p className="flex items-center gap-2">
           {/* Replaced Sparkles and BarChart with logo */}
-          <img src={syntaxSquadLogo} alt="Syntax Squad Logo" className="w-6 h-6" />
+          <img src='@/assets/syntax.png' alt="Syntax Squad Logo" className="w-6 h-6" />
           Powered by Syntax Squad
-        </p>
-        <p className="hidden md:block">|</p>
-        <p className="flex items-center gap-2">
-          Built for NasacSpace Apps Challenge
-          {/* Replaced Sparkles with logo */}
-          <img src={nasaSpaceAppsLogo} alt="NASA Space Apps Challenge Logo" className="w-6 h-6" />
         </p>
       </div>
       <div className="mt-4 flex items-center justify-center gap-4">
