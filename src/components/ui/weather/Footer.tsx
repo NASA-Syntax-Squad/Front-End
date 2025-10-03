@@ -7,7 +7,6 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-4">
         <p className="flex items-center gap-2">
           {/* Replaced Sparkles and BarChart with logo */}
-          <img src='@/assets/syntax.png' alt="Syntax Squad Logo" className="w-6 h-6" />
           Powered by Syntax Squad
         </p>
       </div>
