@@ -514,12 +514,6 @@ const WeatherDashboard = () => {
             )}
           </div>
         </div>
-        <Chatbot
-          location={location}
-          selectedDate={selectedDate}
-          weatherData={weatherData}
-          forecastData={forecastData}
-        />
         <Footer />
       </div>
     </div>
