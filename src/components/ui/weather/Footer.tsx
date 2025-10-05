@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
         <p className="hidden md:block">|</p>
         <p className="flex items-center gap-2">
-          Built for NasacSpace Apps Challenge
+          Built for NasaSpace Apps Challenge
           {/* Replaced Sparkles with logo */}
           <img src={nasaSpaceAppsLogo} alt="NASA Space Apps Challenge Logo" className="w-6 h-6" />
         </p>
