@@ -47,10 +47,10 @@ interface ForecastDay {
 }
 
 const popularLocations = [
-  { name: 'New York, USA', coords: { lat: 40.7128, lon: -74.006 } },
-  { name: 'London, UK', coords: { lat: 51.5074, lon: -0.1278 } },
-  { name: 'Tokyo, Japan', coords: { lat: 35.6762, lon: 139.6503 } },
-  { name: 'Sydney, Australia', coords: { lat: -33.8688, lon: 151.2093 } },
+  { name: 'Colombo, Sri Lanka', coords: { lat: 6.9271, lon: 79.8612 } },
+  { name: 'Nuwara Eliya, Sri Lanka', coords: { lat: 6.9481, lon: 80.7832 } },
+  { name: 'Trincomalee, Sri Lanka', coords: { lat: 8.5710, lon: 81.2237 } },
+  { name: 'Jaffna, Sri Lanka', coords: { lat: 9.6667, lon: 80.0167 } }
 ];
 
 const WeatherDashboard = () => {
