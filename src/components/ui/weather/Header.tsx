@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Satellite, SatelliteDish, Orbit, Radar } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/footer.png';
 import headerBgVideo from '@/assets/header_bg.mp4'; // Import the video file
 
-// ✅ Inline AnimatedNumber (No changes needed here)
+// Inline AnimatedNumber (No changes needed here)
 function AnimatedNumber({
   value,
   duration = 1200,
